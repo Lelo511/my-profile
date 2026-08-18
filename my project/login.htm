@@ -1,0 +1,137 @@
+
+<head>
+<meta charset="UTF-8">
+<title>Login</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:rgb(23, 23, 59);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.login-box{
+    width:350px;
+    background:rgb(43, 90, 102);
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 0 15px rgba(0,0,0,.2);
+}
+
+h2{
+    text-align:center;
+    color:white;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border:1px solid #ccc;
+    border-radius:5px;
+    box-sizing:border-box;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    border:none;
+    background:rgb(61, 107, 152);
+    color:white;
+    font-size:16px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#184f88;
+}
+
+.back{
+    display:block;
+    text-align:center;
+    margin-top:15px;
+    text-decoration:none;
+    color:white;
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="login-box">
+
+<h2>Login</h2>
+
+<form action="profile.html">
+
+<input type="text" placeholder="Username" required>
+
+<input type="password" placeholder="Password" required>
+
+<button type="submit">Login</button>
+
+</form>
+
+<a href="cover.html" class="back">← Back to Home</a>
+
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const loginForm = document.querySelector('form');
+    const usernameInput = document.querySelector('input[placeholder="Username"]');
+    const passwordInput = document.querySelector('input[placeholder="Password"]');
+
+    // Create error message box
+    const errorDiv = document.createElement('div');
+    errorDiv.style.cssText = 'color: #fecaca; background: #7f1d1d; padding: 10px; border-radius: 5px; margin-top: 15px; display: none; text-align: center;';
+    loginForm.appendChild(errorDiv);
+
+    // HARDCODED LOGIN DETAILS - Change these to what you want
+    const validUsername = "samkelo";
+    const validPassword = "dev2026";
+
+    loginForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const enteredUser = usernameInput.value.trim();
+      const enteredPass = passwordInput.value.trim();
+      
+      // Hide old errors
+      errorDiv.style.display = 'none';
+
+      // 1. Check if fields are empty
+      if (!enteredUser ||!enteredPass) {
+        errorDiv.textContent = 'Please enter both username and password';
+        errorDiv.style.display = 'block';
+        return;
+      }
+
+      // 2. Check username and password
+      if (enteredUser === validUsername && enteredPass === validPassword) {
+        alert('Login successful! Welcome ' + enteredUser);
+        
+        // Save login status
+        localStorage.setItem('isLoggedIn', 'true');
+        localStorage.setItem('currentUser', enteredUser);
+        
+        // Redirect to dashboard/home page
+        window.location.href = 'profile.html'; 
+      } else {
+        errorDiv.textContent = 'Invalid username or password';
+        errorDiv.style.display = 'block';
+        passwordInput.value = ''; // Clear password field
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
+

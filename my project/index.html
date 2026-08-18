@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Samkelo Ngcobo | Web Developer & SEO Specialist</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="img/22.jpg" rel="icon">
+  <style>
+    :root {
+      --primary: #991b1b;
+      --dark: #0f172a;
+      --gray: #f0f2f6;
+      --light: #f8fafc;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      font-family: 'Inter', sans-serif; 
+      background: rgb(23, 23, 59); 
+      color: white; 
+      line-height: 1.6;
+    }
+    .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
+    
+    /* HERO SECTION */
+    .hero {
+      background: rgb(68, 129, 143);
+      color: white;
+      padding: 60px 30px;
+      border-radius: 16px;
+      margin-bottom: 40px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: -50px; right: -50px;
+      width: 200px; height: 200px;
+      background: var(--primary);
+      border-radius: 50%;
+      opacity: 0.1;
+    }
+    .hero-content { position: relative; z-index: 2; }
+    .hero h1 { font-size: 2.8rem; font-weight: 800; margin-bottom: 10px; }
+    .hero .tagline { font-size: 1.3rem; color: #cbd5e1; margin-bottom: 20px; }
+    .hero .location { 
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(255,255,255,0.1); padding: 8px 16px; border-radius: 30px;
+      font-size: 0.9rem;
+    }
+    
+    /* QUICK STATS */
+    .stats {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px; margin: 30px 0 40px;
+    }
+    .stat-card {
+      background: rgb(68, 129, 143); padding: 20px; border-radius: 12px;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+      border-top: 3px solid var(--primary);
+    }
+    .stat-card h3 { font-size: 1.8rem; color: white; margin-bottom: 5px; }
+    .stat-card p { color: var(--gray); font-size: 0.9rem; }
+    
+    /* CONTENT SECTIONS */
+    .section {
+      background: rgb(68, 129, 143); padding: 35px; border-radius: 12px;
+      margin-bottom: 25px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+    }
+    .section h2 {
+      font-size: 1.5rem; margin-bottom: 20px; display: flex; align-items: center; gap: 12px;
+    }
+    .section h2::before {
+      content: ''; width: 30px; height: 3px; background: var(--primary); border-radius: 2px;
+    }
+    
+    /* PERSONAL INFO GRID */
+    .info-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px; margin-top: 20px;
+    }
+    .info-item { padding: 15px; background: rgb(68, 129, 143); border-radius: 8px; }
+    .info-item span { display: block; color: white; font-size: 0.85rem; margin-bottom: 4px; }
+    .info-item strong { font-size: 1.05rem; }
+    
+    /* SKILLS TAGS */
+    .tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px; }
+    .tag {
+      background: rgb(68, 129, 143); color: var(--primary); padding: 6px 14px;
+      border-radius: 20px; font-size: 0.85rem; font-weight: 600;
+    }
+    
+    /* CTA */
+    .cta {
+      text-align: center; background: var(--dark); color: white;
+      padding: 40px 30px; border-radius: 12px; margin-top: 40px;
+    }
+    .cta h2 { color: white; margin-bottom: 15px; }
+    .cta-btn {
+      display: inline-block; background: rgb(61, 107, 152); color: white;
+      padding: 14px 28px; border-radius: 8px; text-decoration: none;
+      font-weight: 600; margin-top: 15px; transition: 0.2s;
+    }
+    .cta-btn:hover { background: #09495e; transform: translateY(-2px); }
+    
+    @media (max-width: 640px) {
+      .hero h1 { font-size: 2rem; }
+      .hero .tagline { font-size: 1.1rem; }
+      .section { padding: 25px 20px; }
+    }
+  </style>
+</head>
+<body>
+ <div class="logo"><img src="img/11.jpg" alt="" style="width: 100px; height: 100px;"></div> 
+  <div class="container">
+    
+    <!-- HERO -->
+    <div class="hero">
+      <div class="hero-content">
+        <h1>Samkelo Ngcobo</h1>
+        <p class="tagline">Web Developer | SEO Specialist | Problem Solver</p>
+        <div class="location">
+          <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>
+          Chartwell, Gauteng, South Africa
+        </div>
+      </div>
+    </div>
+
+    <!-- QUICK STATS -->
+    <div class="stats">
+      <div class="stat-card">
+        <h3>3+</h3>
+        <p>Live Projects Built</p>
+      </div>
+      <div class="stat-card">
+        <h3>HTML/CSS/JS</h3>
+        <p>Core Tech Stack</p>
+      </div>
+      <div class="stat-card">
+        <h3>SEO + Dev</h3>
+        <p>Code That Ranks</p>
+      </div>
+    </div>
+
+    <!-- PERSONAL INFO -->
+    <div class="section">
+      <h2>Personal Information</h2>
+      <div class="info-grid">
+        <div class="info-item">
+          <span>Full Name</span>
+          <strong>Samkelo Ngcobo</strong>
+        </div>
+        <div class="info-item">
+          <span>Gender</span>
+          <strong>Male</strong>
+        </div>
+        <div class="info-item">
+          <span>Date of Birth</span>
+          <strong>[16-08-1997]</strong>
+        </div>
+        <div class="info-item">
+          <span>Based In</span>
+          <strong>Chartwell, Gauteng</strong>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <div class="section">
+      <h2>About Me</h2>
+      <p>
+        I’m a self-taught web developer from Chartwell who builds clean, fast websites for real South African businesses. I don’t just write code — I solve problems.
+      </p>
+      <p>
+        I believe the best tech is invisible: if a user has to think, I haven’t done my job. That’s why I obsess over mobile-first design, loading speed, and simple UX.
+      </p>
+      <div class="tags">
+        <span class="tag">HTML5</span>
+        <span class="tag">CSS3</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">Firebase</span>
+        <span class="tag">SEO</span>
+        <span class="tag">Responsive Design</span>
+      </div>
+    </div>
+
+    <!-- BACKGROUND -->
+    <div class="section">
+      <h2>Background</h2>
+      <p>
+        <strong>Education:</strong> Completed schooling in Gauteng. First touched code in high school IT and never looked back. Now I learn by building — YouTube, docs, and breaking things until they work.
+      </p>
+      <p>
+        <strong>Family:</strong> Raised in a household where we fixed things ourselves. No money for new stuff meant I learned to troubleshoot, adapt, and make do. That’s now my debugging style: no excuses, just solutions.
+      </p>
+    </div>
+
+    <!-- INSPIRATION -->
+    <div class="section">
+      <h2>Inspiration & Motivation</h2>
+      <p>
+        I’m inspired by township businesses running R100k/month off a notebook and sheer hustle. They deserve the same tech as big companies. My motivation is to bridge that gap.
+      </p>
+      <p>
+        Long term, I want freedom: to work from anywhere, build products that pay me while I sleep, and prove that world-class devs can come from anywhere — including Chartwell.
+      </p>
+    </div>
+
+    <!-- STRENGTHS & WEAKNESSES -->
+    <div class="section">
+      <h2>Strengths & Weaknesses</h2>
+      <p>
+        <strong>Strengths:</strong> Relentless problem-solving. I’ll debug for 6 hours straight if needed. I ship fast, design for mobile first, and understand what SA users actually need — not just what looks good in California.
+      </p>
+      <p>
+        <strong>Weaknesses:</strong> I over-polish. I’ll spend an hour adjusting a button when I should ship the feature. I’m fixing this by using 90-minute sprints and launching MVPs. Still growing my back-end skills beyond Firebase.
+      </p>
+    </div>
+
+    <!-- WHY SEO + WEB DEV -->
+    <div class="section">
+      <h2>Why SEO & Web Development</h2>
+      <p>
+        Web dev lets me build once and help thousands. SEO makes sure people actually find it. Most SA devs can code. Few can rank. I want both skills because a beautiful site with zero traffic is just expensive art.
+      </p>
+      <p>
+        For local businesses, page 1 of Google is life or death. If I can build the site AND get it ranked, I become 10x more valuable than a basic coder.
+      </p>
+    </div>
+
+    <!-- 5 YEARS -->
+    <div class="section">
+      <h2>Where I See Myself in 5 Years</h2>
+      <p>
+        Running a lean web studio that builds and ranks sites for SA SMEs. 2–3 SaaS tools earning passive income. Mentoring 5 devs from my area who are now employed or freelancing.
+      </p>
+      <p>
+        Goal: Prove that you don’t need to be in Sandton or Cape Town to build global-level tech. Chartwell can ship too.
+      </p>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta">
+      <h2>Let’s Build Something</h2>
+      <p>Need a fast, mobile-friendly website that actually gets found on Google?</p>
+      <a href="cover.html" class="cta-btn">Back</a>
+      <a href="contact.html" class="cta-btn">Contact</a>
+      <a href="gallery.html" class="cta-btn">Gallery</a>
+    </div>
+
+  </div>
+</body>
+</html>

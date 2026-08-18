@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Samkelo Ngcobo | Portfolio</title>
+  <link href="22.jpg" rel="icon">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      font-family: 'Inter', sans-serif; 
+      background: url('img/4444.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #2f526f; 
+      min-height: 100vh; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+    }
+    .cover { 
+      max-width: 600px; 
+      width: 100%; 
+      padding: 20px; 
+      background: rgba(255,255,255,0.85); 
+      border-radius: 10px; 
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+    h1 { font-size: 3rem; font-weight: 800; margin-bottom: 15px; }
+    p { font-size: 1.2rem; margin-bottom: 35px; line-height: 1.5; }
+    .btn {
+      display: inline-block; 
+      background: #2f526f; 
+      color: white;
+      padding: 16px 32px; 
+      border-radius: 8px; 
+      text-decoration: none;
+      font-weight: 700; 
+      font-size: 1.1rem; 
+      transition: 0.2s;
+    }
+    .btn:hover { background: #6c27b0; transform: translateY(-2px); }
+
+    /* Tablet adjustments */
+    @media (max-width: 768px) {
+      h1 { font-size: 2.2rem; }
+      p { font-size: 1rem; }
+      .btn { padding: 12px 24px; font-size: 1rem; }
+    }
+
+    /* Mobile adjustments */
+    @media (max-width: 480px) {
+      h1 { font-size: 1.8rem; }
+      p { font-size: 0.9rem; }
+      .btn { width: 100%; display: block; margin-top: 20px; }
+      .cover { padding: 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="cover">
+    <h1><strong>Samkelo Ngcobo</strong></h1>
+    <p>Web Developer & SEO Specialist from Chartwell, Gauteng<br>
+       Building fast, functional websites for real SA businesses</p>
+    <a href="login.htm" class="btn">View My Profile →</a>
+  </div>
+</body>
+</html>
